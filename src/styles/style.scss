@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  background-color: #f8f8f8;
+}
+
+.phonebook {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.contact-list {
+  background-color: #ffffff;
+  list-style: none;
+  border-radius: 5px;
+}
+
+.contact-list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.button {
+  min-width: 100px;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #303030;
+  padding: 5px;
+}
+
+.label, .input {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.input {
+  font-weight: 14px;
+}
