@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-const ContactItem = ({ contacts, onDelete }) =>
-  contacts.map(({ id, name, number }) => (
+const ContactItem = ({ id, name, number, onDelete }) =>
     <li className="contact-list-item" key={id}>
       <p className="bold">{name}</p>
       <p>{number}</p>
@@ -9,5 +8,4 @@ const ContactItem = ({ contacts, onDelete }) =>
         Delete
       </button>
     </li>
-  ));
 export default ContactItem;
