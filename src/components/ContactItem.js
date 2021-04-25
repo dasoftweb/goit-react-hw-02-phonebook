@@ -1,7 +1,7 @@
 // import PropTypes from 'prop-types';
 
 const ContactItem = ({ id, name, number, onDelete }) =>
-    <li className="contact-list-item" key={id}>
+    <li className="contact-list-item">
       <p className="bold">{name}</p>
       <p>{number}</p>
       <button className="button" onClick={() => onDelete(id)}>
