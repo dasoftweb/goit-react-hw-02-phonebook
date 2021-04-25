@@ -9,7 +9,8 @@ body {
 }
 
 .contact-list {
-  background-color: #ffffff;
+  background-color: #353535;
+  color: #c4c4c4;
   list-style: none;
   border-radius: 5px;
 }
@@ -33,6 +34,7 @@ body {
   font-weight: bold;
   color: #303030;
   padding: 5px;
+  cursor: pointer;
 }
 
 .label, .input {
@@ -41,5 +43,8 @@ body {
 }
 
 .input {
-  font-weight: 14px;
+  font-weight: 12px;
+  height: 40px;
+  border: 2px solid #c4c4c4;
+  border-radius: 5px;
 }

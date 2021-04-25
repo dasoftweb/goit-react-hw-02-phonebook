@@ -49,10 +49,10 @@ class App extends Component {
       contact.name.toLowerCase().includes(normalizedFilter),
     );
     return (
-      <div className='phonebook'>
-        <h1 className='phonebook_title'>Phonebook</h1>
+      <div className="phonebook">
+        <h1 className="phonebook_title">Phonebook</h1>
         <ContactForm onSubmit={this.formSubmitHandler} />
-        <h2 className='phonebook_title'>Contacts</h2>
+        <h2 className="phonebook_title">Contacts</h2>
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactList contacts={visibleContacts} onDelete={this.deleteContact} />
       </div>
