@@ -13,9 +13,7 @@ class ContactForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-
     this.props.onSubmit(this.state); // App formSubmitHandler
-
     this.reset();
   };
 
@@ -41,7 +39,7 @@ class ContactForm extends Component {
         <label className='label'>
           Phone
           <input className='input'
-            type="text"
+            type="tel"
             value={this.state.number}
             onChange={this.handeChange}
             name="number"

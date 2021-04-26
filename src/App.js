@@ -23,6 +23,10 @@ class App extends Component {
     return 'id-' + (Math.max(...contactIds) + 1);
   };
 
+  capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   formSubmitHandler = data => {
     const { name, number } = data;
     const normalizedName = name.toLowerCase();
@@ -35,7 +39,7 @@ class App extends Component {
       return alert(`${name} is already in contacts.`);
     }
 
-    const newContact = { id: this.setContactId(), name, number };
+    const newContact = { id: this.setContactId(), name: this.capitalizeFirstLetter(name), number };
     this.setState(prevState => ({
       contacts: [...prevState.contacts, newContact],
     }));
