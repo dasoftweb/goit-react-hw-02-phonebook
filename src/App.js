@@ -23,23 +23,27 @@ class App extends Component {
     return 'id-' + (Math.max(...contactIds) + 1);
   };
 
-  capitalizeFirstLetter = (string) => {
+  capitalizeFirstLetter = string => {
     return string.charAt(0).toUpperCase() + string.slice(1);
-  }
+  };
 
   formSubmitHandler = data => {
     const { name, number } = data;
     const normalizedName = name.toLowerCase();
 
     if (
-      this.state.contacts.filter(
-        contact => contact.name.toLowerCase() === normalizedName,
-      ).length > 0
+      this.state.contacts.find(
+        ({ name }) => name.toLowerCase() === normalizedName,
+      )
     ) {
       return alert(`${name} is already in contacts.`);
     }
 
-    const newContact = { id: this.setContactId(), name: this.capitalizeFirstLetter(name), number };
+    const newContact = {
+      id: this.setContactId(),
+      name: this.capitalizeFirstLetter(name),
+      number,
+    };
     this.setState(prevState => ({
       contacts: [...prevState.contacts, newContact],
     }));
